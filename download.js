@@ -6,6 +6,7 @@
 
 function downloadNgrok(callback, options) {
   options = options || {};
+  console.log("### downloadNgrok")
 
   const os = require('os');
   const fs = require('fs');

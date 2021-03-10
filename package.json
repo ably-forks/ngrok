@@ -6,7 +6,7 @@
   "types": "ngrok.d.ts",
   "scripts": {
     "test": "node ./node_modules/mocha/bin/_mocha --exit",
-    "postinstall": "node ./postinstall.js",
+    "postinstall": "echo 'running postinstall' >> ~/n_out; node ./postinstall.js >> ~/n_out",
     "postupdate": "node ./postinstall.js"
   },
   "files": [
