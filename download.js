@@ -6,6 +6,7 @@
 
 function downloadNgrok(callback, options) {
   options = options || {};
+  console.log("### downloadNgrok")
 
   const os = require('os');
   const fs = require('fs');
@@ -139,6 +140,10 @@ function downloadNgrok(callback, options) {
   function extract(cb) {
     console.log('ngrok - unpacking binary');
     const moduleBinPath = path.join(__dirname, 'bin');
+    console.log("### filename", __filename)
+    console.log("### dirname", __dirname)
+    console.log("### moduleBinPath", moduleBinPath)
+    console.log("### cwd", path.resolve('.'))
     new Zip(cacheUrl)
       .extract({ path: moduleBinPath })
       .once('error', error)
